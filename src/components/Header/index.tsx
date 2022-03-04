@@ -8,12 +8,8 @@ export function Header() {
   return (
     <S.Header>
       <div>
-        <a
-          href="https://developer.marvel.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Marvel API app
+        <a href="/" target="_blank" rel="noreferrer">
+          Marvel API APP
         </a>
       </div>
     </S.Header>
