@@ -26,7 +26,6 @@ const nextConfig = withPWA({
   images: {
     domains: ["i.annihil.us"],
     loader: "imgix",
-    path: "https://noop/",
   },
 });
 
