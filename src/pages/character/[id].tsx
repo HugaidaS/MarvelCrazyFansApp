@@ -34,7 +34,7 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const id = params?.id;
+  const id = params?.id || 1009148;
 
   const characterId = await api.get(`characters/${id}`);
   const characterComics = await api.get(`characters/${id}/comics`);
@@ -69,7 +69,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const character = characterId.data.data.results.map((character: any) => {
     const name = regExp.exec(character.name);
-    var hero = character.name.substring(0, character.name.indexOf("("));
+    const hero = character.name.substring(0, character.name.indexOf("("));
 
     return {
       id: character.id,

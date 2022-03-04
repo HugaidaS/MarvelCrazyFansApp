@@ -9,6 +9,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient} contextSharing={true}>
+      <NextNprogress
+        color="#f52933"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={5}
+        showOnShallow={true}
+      />
       <Head>
         <title>Marvel App</title>
         <meta name="description" content="Marvel API app" />
