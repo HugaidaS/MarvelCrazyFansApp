@@ -13,7 +13,7 @@ export function Header() {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/img/marvel_logo.svg" alt="Marvel logo" />
+          Marvel API app
         </a>
       </div>
     </S.Header>
