@@ -3,34 +3,21 @@ export type CharacterType = {
   name?: string
   hero: string
   description: string
-  thumbnail: {
-    extension: string,
-    path: string
-  }
-}
-
-export type DetailsLists = {
+  thumbnail: string
   comics: List[]
   events: List[]
   series: List[]
-  stories: List[]
 }
 
 export type Participations = {
   available: number
   collectionURI: string
   returned: number
-  items: List[]
+  items: [{ name: string; resourceURI: string }]
 }
 
-export type List = {
+type List = {
   id: number
-  thumbnail: {
-    path:string,
-    extension:string
-  }
+  thumbnail: string
   title: string
-  src?:string
 }
-
-type InfoKey = "comics"|"events"|"series"|"stories"
