@@ -16,7 +16,7 @@ export type Participations = {
   items: [{ name: string; resourceURI: string }]
 }
 
-type List = {
+export type List = {
   id: number
   thumbnail: string
   title: string
