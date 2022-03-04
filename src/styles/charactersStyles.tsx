@@ -11,9 +11,11 @@ export const Container = styled.div`
 
 export const ButtonsContainer = styled.div`
   display: flex;
+  justify-content: center;
 `;
 export const ButtonSwitch = styled.button`
   margin: 20px;
+  color: white;
   outline: none;
   width: 130px;
   height: 40px;
@@ -28,7 +30,7 @@ export const ButtonSwitch = styled.button`
   display: inline-block;
   transition: all 0.3s ease;
   &:hover {
-    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    box-shadow: -7px -7px 20px 0px #85141499, -4px -4px 5px 0px #cb1c1ced,
       7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
   }
 `;

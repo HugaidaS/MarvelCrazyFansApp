@@ -27,6 +27,7 @@ export const Character = styled.div`
   background: black;
   color: white;
   width: 200px;
+  border-radius:10px;
 
   &:hover {
     .wrapper {
@@ -54,7 +55,7 @@ export const Thumb = styled.div`
   margin: 0;
   overflow: hidden;
   padding: 0;
-
+  border-radius:10px 10px 0 0;
   .wrapper {
     height: 250px;
     position: relative;

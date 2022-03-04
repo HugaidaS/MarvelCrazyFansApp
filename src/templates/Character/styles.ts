@@ -10,8 +10,7 @@ export const Content = styled.section`
   display: grid;
   grid-template-columns: 2fr 3fr;
   gap: 2rem;
-
-
+  padding:10px;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
@@ -20,7 +19,8 @@ export const Content = styled.section`
 export const Infos = styled.aside`
   display: flex;
   flex-direction: column;
-
+  color:white;
+  text-align:center;
   h1 {
     font-size: 2rem;
   }
@@ -76,12 +76,10 @@ export const List = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
+  color:white;
   header {
     display: flex;
     gap: 1rem;
-    background-color: var(--shape);
-    color: var(--title);
     padding: 1rem;
     position: relative;
 
