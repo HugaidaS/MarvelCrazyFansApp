@@ -7,7 +7,7 @@ const PRIVATE_KEY = process.env.NEXT_PUBLIC_MARVEL_API_PRIVATE_KEY
 const ts = +new Date()
 
 const api = axios.create({
-  baseURL: "http://gateway.marvel.com/v1/public/",
+  baseURL: "https://gateway.marvel.com/v1/public/",
   params: {
     apikey: PUBLIC_KEY,
     ts: ts,
