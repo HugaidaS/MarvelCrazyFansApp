@@ -18,12 +18,15 @@ const nextConfig = withPWA({
     ];
   },
   reactStrictMode: true,
+  trailingSlash: true,
   pwa: {
     dest: "public",
     disable: !isProd,
   },
   images: {
     domains: ["i.annihil.us"],
+    loader: "imgix",
+    path: "https://noop/",
   },
 });
 

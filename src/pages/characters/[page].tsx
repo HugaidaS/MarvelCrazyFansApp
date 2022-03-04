@@ -1,4 +1,4 @@
-import * as Styled from "./styles";
+import * as Styled from "../../styles/charachtersStyles";
 import { useQuery } from "react-query";
 import api from "../../services/api/api";
 import { CharacterType } from "../../types/character";
