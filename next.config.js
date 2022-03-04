@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
-import withPWA from "next-pwa";
+
 const isProd = process.env.NODE_ENV === "production";
 
-const nextConfig = withPWA({
+const nextConfig = {
   async redirects() {
     return [
       {
@@ -26,6 +26,6 @@ const nextConfig = withPWA({
   images: {
     domains: ["i.annihil.us"],
   },
-});
+};
 
 export default nextConfig;
