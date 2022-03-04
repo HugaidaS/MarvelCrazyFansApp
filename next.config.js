@@ -1,6 +1,30 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+import withPWA from "next-pwa";
+const isProd = process.env.NODE_ENV === "production";
 
-module.exports = nextConfig
+const nextConfig = withPWA({
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/characters/1",
+        permanent: true,
+      },
+      {
+        source: "/characters",
+        destination: "/characters/1",
+        permanent: true,
+      },
+    ];
+  },
+  reactStrictMode: true,
+  pwa: {
+    dest: "public",
+    disable: !isProd,
+  },
+  images: {
+    domains: ["i.annihil.us"],
+  },
+});
+
+export default nextConfig;
