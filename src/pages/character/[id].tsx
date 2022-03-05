@@ -20,6 +20,7 @@ export const featuredCharacters = [
   { id: 1010801, name: "Ant Man: Scott Lang" },
   { id: 1009180, name: "Beta-Ray: Bill" },
   { id: 1009187, name: "Black Panther" },
+  { id: 1009187, name: "Black Panther" },
 ];
 
 export async function getStaticPaths() {
