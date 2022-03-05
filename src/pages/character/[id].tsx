@@ -15,26 +15,9 @@ const CharacterPage = ({ character }: CharacterProps) => {
 };
 export default CharacterPage;
 
-export const featuredCharacters = [
-  { id: 1010354, name: "Adam Warlock" },
-  { id: 1010801, name: "Ant Man: Scott Lang" },
-  { id: 1009180, name: "Beta-Ray: Bill" },
-  { id: 1009187, name: "Black Panther" },
-  { id: 1009187, name: "Black Panther" },
-];
+export const getServerSideProps: GetStaticProps = async ({ params }) => {
+  console.log(params);
 
-export async function getStaticPaths() {
-  const paths = featuredCharacters.map((character) => ({
-    params: { id: String(character.id) },
-  }));
-
-  return {
-    paths,
-    fallback: "blocking",
-  };
-}
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
   const id = params?.id;
 
   const characterId = await api.get(`characters/${id}`);
@@ -66,7 +49,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     };
   });
 
-  var regExp = /\(([^)]+)\)/;
+  const regExp = /\(([^)]+)\)/;
 
   const character = characterId.data.data.results.map((character: any) => {
     const name = regExp.exec(character.name);
