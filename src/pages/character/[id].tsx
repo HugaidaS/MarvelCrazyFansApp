@@ -34,7 +34,7 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const id = params?.id || 1009148;
+  const id = params?.id;
 
   const characterId = await api.get(`characters/${id}`);
   const characterComics = await api.get(`characters/${id}/comics`);
