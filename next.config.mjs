@@ -17,6 +17,7 @@ const nextConfig = {
       },
     ];
   },
+
   reactStrictMode: true,
   trailingSlash: true,
   pwa: {
