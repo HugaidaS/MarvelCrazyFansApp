@@ -1,4 +1,4 @@
-import { GetStaticProps } from "next";
+import { GetServerSideProps, GetStaticProps } from "next";
 import api from "../../services/api/api";
 import { CharacterTemplate } from "../../templates/Character";
 import { CharacterType } from "../../types/character";
@@ -15,9 +15,7 @@ const CharacterPage = ({ character }: CharacterProps) => {
 };
 export default CharacterPage;
 
-export const getServerSideProps: GetStaticProps = async ({ params }) => {
-  console.log(params);
-
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const id = params?.id;
 
   const characterId = await api.get(`characters/${id}`);
